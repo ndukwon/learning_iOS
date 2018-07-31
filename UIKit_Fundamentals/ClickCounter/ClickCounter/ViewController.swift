@@ -11,12 +11,12 @@ import UIKit
 class ViewController: UIViewController {
     
     var count = 0
-    var label: UILabel!
+    @IBOutlet var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ex1_addViewsProgrammatically()
+//        ex1_addViewsProgrammatically()
     }
     
     func ex1_addViewsProgrammatically() {
@@ -47,12 +47,12 @@ class ViewController: UIViewController {
     /*
      When assigning a button’s action in code, you will need to mark the function with @objc as we did in incrementCount().
      */
-    @objc func incrementCount() {
+    @IBAction func incrementCount() {
         self.count += 1
         self.label.text = "\(self.count)"
     }
     
-    @objc func decrementCount() {
+    @IBAction func decrementCount() {
         self.count -= 1
         self.label.text = "\(self.count)"
     }
